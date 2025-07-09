@@ -86,6 +86,12 @@ https://user-images.githubusercontent.com/38818956/141935520-d8b9106a-c0f9-4638-
 - NES.CSS and RPGUI used for retro game styling
 - React-beautiful-DND used for drag and drop on the Kanban page
 
+- Construído usando JavaScript, React, Redux (RTK)
+- Back-end usando TypeScript, Node, Express, OAuth, Passport e CORS
+- Socket.io usado para movimentação multijogador e mensagens instantâneas em GIF no estilo Snapchat
+- NES.CSS e RPGUI usados ​​para estilização de jogos retrô
+- React-beautiful-DND usado para arrastar e soltar na página Kanban
+
 ### Database
 
 - PostgreSQL

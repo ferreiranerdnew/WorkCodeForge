@@ -1,5 +1,5 @@
 //web socket endpoint(our server)
-export const wsEndpoint = 'ws://localhost:5080';
+export const wsEndpoint = 'ws://192.168.110.178:5080';
 
 export const navBarHeight = 0;
 //basemap size
