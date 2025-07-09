@@ -1,0 +1,155 @@
+.task-dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.new-task {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid #ddd;
+  border-collapse: separate !important;
+  border-spacing: 0;
+}
+.table thead {
+  font-size: 18px;
+  color: white;
+  border: 1px solid black;
+  background-color: rgb(34, 62, 111);
+}
+
+.table tbody {
+  font-size: 15px;
+  border: 1px solid black;
+
+}
+
+.table th {
+    border: 1px solid black;
+
+}
+
+.table td {
+    border: 1px solid black;
+
+}
+
+.task-user-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.task-user-container li {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+
+.task-user-list img {
+  height: 30px;
+  width: 30px;
+}
+.icon {
+  font-size: 30px;
+}
+
+.priority {
+  display: flex;
+  justify-content: center;
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC)
+      14 0,
+    pointer;
+}
+
+.low {
+  color: green;
+}
+
+.medium {
+  color: #e5ce00;
+}
+
+.high {
+  color: red;
+}
+
+.status {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC)
+      14 0,
+    pointer;
+  color: rgb(255, 255, 255);
+}
+
+.progress-status {
+  background-color: #ff5722;
+}
+.edit-icon {
+  display: flex;
+  align-items: center;
+  transition: 1s;
+}
+
+.delete-icon {
+  transition: 1s;
+  display: flex;
+}
+
+.edit-icon:hover {
+  color: rgb(231, 228, 79);
+}
+
+.delete-icon:hover {
+  color: rgb(240, 61, 61);
+}
+
+.name-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-delete {
+  font-size: 25px;
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC)
+      14 0,
+    pointer;
+  display: flex;
+  align-items: center;
+}
+
+.warning {
+  color: red !important;
+}
+
+.new-task {
+  display: flex;
+  justify-content: center;
+}
+
+.list-of-users  {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-of-users li {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}

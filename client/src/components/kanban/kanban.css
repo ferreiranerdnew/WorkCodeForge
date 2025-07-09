@@ -1,0 +1,175 @@
+.kanban {
+  overflow: show;
+  height: 100vh;
+  width: 100%;
+}
+
+.kanban-layout {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.kanban-card {
+  height: 600px;
+  width: 300px;
+  overflow: auto;
+  background: white;
+}
+
+#kanban-card-id {
+  margin: 0;
+  padding: 0;
+}
+
+.is-late {
+  background-color: crimson;
+}
+
+.to-do {
+  background-color: rgb(135, 59, 223);
+}
+
+.in-progress {
+  background-color: rgb(227, 230, 51);
+}
+
+.is-done {
+  background-color: rgb(58, 207, 53);
+}
+
+.late {
+  color: crimson;
+}
+
+.progress {
+  color: rgb(227, 230, 51);
+}
+
+.done {
+  color: rgb(58, 207, 53);
+}
+
+.kanban-card header {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.task-item-container {
+  background: linear-gradient(32deg, #ffe783, #a2f2ff, #f5bcff);
+  background-size: 600% 600%;
+  animation: GradientBackground 3s ease infinite;
+  margin: 15px;
+  height: 145px;
+  border-radius: 15px;
+  padding: 0;
+  border: 3px solid black;
+  color: black;
+  overflow: hidden;
+}
+
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.task-item-container li {
+  list-style: none;
+  margin: 0;
+}
+
+.task-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.task-title h1 {
+  margin: 0;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-item-container p {
+  margin: 0 0 0 15px;
+  height: 70px;
+}
+
+.priority-icon {
+  font-size: 30px;
+  display: flex;
+  margin: 0 10px 0 0;
+}
+
+.low {
+  color: green;
+}
+
+.medium {
+  color: yellow;
+}
+
+.high {
+  color: red;
+}
+
+.count-users {
+  display: flex;
+  margin-left: 10px;
+  justify-content: flex-end;
+  font-size: 15px;
+  list-style: none;
+}
+
+.task-users {
+  display: flex;
+  margin-right: 10px;
+  justify-content: flex-end;
+  font-size: 20px;
+  list-style: none;
+}
+
+.task-users li {
+  margin: 0;
+  border-radius: 25px;
+}
+
+.task-users img {
+  margin-left: 10px;
+  border-radius: 25px;
+}
+
+.dialog-button {
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.dialog-button:hover {
+  color: red;
+}
+
+.show-more {
+  font-size: 30px;
+}
+
+.task-dialog {
+  overflow: hidden;
+}
+
+.task-dialog h1 {
+  text-align: left;
+}
