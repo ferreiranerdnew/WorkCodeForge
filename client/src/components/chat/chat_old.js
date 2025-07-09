@@ -1,4 +1,3 @@
-// src/components/Chat.jsx
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
@@ -7,20 +6,17 @@ import {
   SEND_DIRECT,
   CLEAR_INCOMING,
   TOGGLE_GIF_SEARCH_OPEN,
-  JOIN_VIDEO,
-} from '../../reducers/mapReducer_old';
+} from '../../reducers/mapReducer';
 import './chat.css';
 import { FaClipboardList } from 'react-icons/fa';
-import VideoContainer from '../video/video';
 
-export default function Chat({ canOpen }) {
+function Chat({ canOpen }) {
+  const [chatboxShow, setChatboxShow] = useState(false);
   const [showGif, setShowGif] = useState(false);
   const [receiver, setReceiver] = useState('Everyone');
   const [showInstruction, setShowInstruction] = useState(false);
-  const [videoOn, setVideoOn] = useState(false);
   const dispatch = useDispatch();
   const { width, height, topMargin, leftMargin } = useWindowDimensions();
-
   const userId = useSelector((state) => state.user.id);
   const playersArr = useSelector((state) => state.players);
   const incomingGifState = useSelector((state) => state.incomingGif);
@@ -43,19 +39,6 @@ export default function Chat({ canOpen }) {
 
   const toggleInstruction = () => {
     setShowInstruction(!showInstruction);
-  };
-
-  const toggleVideoCall = () => {
-    if (videoOn) {
-      // Parar chamada de vídeo
-      setVideoOn(false);
-      console.log('Chamada de vídeo encerrada');
-    } else {
-      // Iniciar chamada de vídeo
-      dispatch(JOIN_VIDEO());
-      setVideoOn(true);
-      console.log('Chamada de vídeo iniciada');
-    }
   };
 
   const userArr = Object.values(onlineUsers).map((user) => user.name);
@@ -133,24 +116,6 @@ export default function Chat({ canOpen }) {
             Send a GIF
           </button>
         )}
-
-      {canOpen && (
-        <button
-          className={`nes-btn ${videoOn ? 'is-error' : 'is-success'}`}
-          onClick={toggleVideoCall}
-          style={{
-            zIndex: 20,
-            position: 'absolute',
-            left: width - leftMargin - 255,
-            top: topMargin + 190,
-            width: 186,
-            height: 39,
-            paddingLeft: 3,
-          }}
-        >
-          {videoOn ? 'End Video Call' : 'Start Video Call'}
-        </button>
-      )}
 
       {canOpen && (
         <h1
@@ -244,24 +209,8 @@ export default function Chat({ canOpen }) {
           />
         </div>
       )}
-
-      {videoOn && canOpen && (
-        <div
-          className="video-wrapper"
-          style={{ 
-            position: 'fixed', 
-            bottom: 20, 
-            right: 20, 
-            width: 'auto', 
-            zIndex: 1000,
-            borderRadius: '10px',
-            overflow: 'hidden',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.3)'
-          }}
-        >
-          <VideoContainer />
-        </div>
-      )}
     </>
   );
 }
+
+export default Chat;

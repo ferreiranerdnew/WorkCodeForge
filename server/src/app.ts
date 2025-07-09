@@ -85,15 +85,16 @@ app.get('/', authCheck, (req: Request, res: Response) => {
 // });
 // Logout (recomendo tratar o callback do req.logout para evitar problemas)
 app.get('/logout', (req: Request, res: Response) => {
-  req.logout(err => {
-    if (err) {
-      console.error('Logout error:', err);
-      return res.status(500).send('Logout error');
-    }
+  try {
+    req.logout();
     // Redireciona para a URL do cliente (frontend) após logout
     res.redirect(process.env.CLIENT_URL || '/');
-  });
+  } catch (err) {
+    console.error('Logout error:', err);
+    res.status(500).send('Logout error');
+  }
 });
+
 
 // Retornar dados do usuário autenticado
 app.get('/user', async (req: Request, res: Response) => {
